@@ -16,7 +16,7 @@ var tibetan =function(s) {
 		});
 		if (last<str.length) {
 			tokens.push(str.substring(last));
-			offsets.push(last);
+			offsets.push(offset+last);
 		}
 		if (i===arr.length-1) break;
 		tokens.push('\n');
