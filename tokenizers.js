@@ -1,6 +1,7 @@
 var tibetan =function(s) {
 	//continuous tsheg grouped into same token
 	//shad and space grouped into same token
+	if (!s) return {tokens:[],offsets:[]};
 	var offset=0;
 	var tokens=[],offsets=[];
 	s=s.replace(/\r\n/g,'\n').replace(/\r/g,'\n');
@@ -32,6 +33,7 @@ var isSpace=function(c) {
 var isCJK =function(c) {return ((c>=0x3000 && c<=0x9FFF) 
 || (c>=0xD800 && c<0xDC00) || (c>=0xFF00) ) ;}
 var simple1=function(s) {
+	if (!s) return {tokens:[],offsets:[]};
 	var offset=0;
 	var tokens=[],offsets=[];
 	s=s.replace(/\r\n/g,'\n').replace(/\r/g,'\n');
