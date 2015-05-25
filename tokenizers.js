@@ -37,7 +37,7 @@ var simple1=function(s) {
 	var offset=0;
 	var tokens=[],offsets=[];
 	s=s.replace(/\r\n/g,'\n').replace(/\r/g,'\n');
-	arr=s.split('\n');
+	var arr=s.split('\n');
 
 	var pushtoken=function(t,off) {
 		var i=0;
