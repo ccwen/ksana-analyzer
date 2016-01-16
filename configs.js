@@ -45,6 +45,14 @@ var simple1={
 	}
 	
 }
+var zidian1={ //for single character search
+	func:{
+		tokenize:tokenizers.simple
+		,setNormalizeTable:setNormalizeTable
+		,normalize: normalize1
+		,isSkip:	isSkip1
+	}	
+}
 var tibetan1={
 	func:{
 		tokenize:tokenizers.tibetan
@@ -53,4 +61,4 @@ var tibetan1={
 		,isSkip:isSkip_tibetan
 	}
 }
-module.exports={"simple1":simple1,"tibetan1":tibetan1}
+module.exports={"simple1":simple1,"tibetan1":tibetan1,"zidian1":zidian1};
